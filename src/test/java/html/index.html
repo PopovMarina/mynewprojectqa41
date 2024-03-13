@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    Natures' first  green is gold,
+    Her hardset hue to hold.
+    Her early leaf's a flower,
+    <span> But only so an hour.</span>
+
+    <button id="sumBtn">SUM</button>
+    <input type="number" id="operand1">
+    <span>+</span>
+    <input type="number" id="operand2">
+
+    <span>=</span>
+    <span id="result"></span>
+
+</div>
+<script>
+    let operand1  = document.querySelector('#operand1');
+    //мы пытаемся найти операнд1 из нашего документа ДОМ -
+    //Document Object Model по ID (#)
+    let operand2  = document.querySelector('#operand2');
+    let sumBut = document.querySelector('#sumBtn');
+    let result = document.querySelector('#result');
+
+    sumBtn.onclick = function(){
+    //обработчик события onclick
+    let res = +operand1.value + +operand2.value;
+    result.innerText = res;
+    console.log(res);
+
+    }
+
+</script>
+
+</body>
+</html>
