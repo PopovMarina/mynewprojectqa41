@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java" afterDir="false" />
+    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AssertionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AssertionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ContactsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ContactsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +44,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.AssertionTest.failTest.executor": "Run",
     "TestNG.AssertionTest.testDevideByZero.executor": "Run",
+    "TestNG.PhoneBookTest.deleteContactApproachTwo.executor": "Run",
+    "TestNG.PhoneBookTest.deleteContanctApproachTwo.executor": "Run",
     "TestNG.PhoneBookTest.loginOfAnExistingUserAddContact.executor": "Run",
     "TestNG.PhoneBookTest.successfulRegistration.executor": "Run",
     "TestNG.WindowAndTabTests.dragAndDropTest.executor": "Run",
     "TestNG.WindowAndTabTests.executor": "Run",
     "TestNG.WindowAndTabTests.sliderTest.executor": "Debug",
+    "TestNG.WindowAndTabTests.waitForAnElement.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "/Users/marina/Documents/Java/mynewprojectqa41/src/main/java/org/example/Main.java",
@@ -57,7 +60,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.WindowAndTabTests.dragAndDropTest">
+  <component name="RunManager" selected="Application.WindowAndTabTests">
     <configuration name="WindowAndTabTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
       <module name="mynewprojectqa41" />
@@ -71,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssertionTest.testDevideByZero" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneBookTest.deleteContactApproachTwo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
         <pattern>
@@ -80,8 +83,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AssertionTest" />
-      <option name="METHOD_NAME" value="testDevideByZero" />
+      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
+      <option name="METHOD_NAME" value="deleteContactApproachTwo" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -89,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WindowAndTabTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneBookTest.deleteContanctApproachTwo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +101,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
+      <option name="METHOD_NAME" value="deleteContanctApproachTwo" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -124,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WindowAndTabTests.sliderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="WindowAndTabTests.waitForAnElement" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
         <pattern>
@@ -134,7 +138,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.WindowAndTabTests" />
-      <option name="METHOD_NAME" value="sliderTest" />
+      <option name="METHOD_NAME" value="waitForAnElement" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -144,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.WindowAndTabTests.dragAndDropTest" />
         <item itemvalue="Application.WindowAndTabTests" />
-        <item itemvalue="TestNG.WindowAndTabTests.sliderTest" />
-        <item itemvalue="TestNG.WindowAndTabTests" />
-        <item itemvalue="TestNG.AssertionTest.testDevideByZero" />
+        <item itemvalue="TestNG.WindowAndTabTests.waitForAnElement" />
+        <item itemvalue="TestNG.PhoneBookTest.deleteContactApproachTwo" />
+        <item itemvalue="TestNG.PhoneBookTest.deleteContanctApproachTwo" />
+        <item itemvalue="TestNG.WindowAndTabTests.dragAndDropTest" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +172,20 @@
       <option name="presentableId" value="Default" />
       <updated>1710369444604</updated>
     </task>
+    <task id="LOCAL-00001" summary="Lesson 8">
+      <option name="closed" value="true" />
+      <created>1710455664411</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710455664411</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lesson 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -180,8 +197,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
-          <line>37</line>
+          <line>56</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
+          <line>192</line>
+          <properties class="tests.WindowAndTabTests" method="findRowByValueLambda">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

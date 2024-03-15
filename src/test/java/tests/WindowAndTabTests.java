@@ -10,12 +10,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 public class WindowAndTabTests {
     public static void main(String[] args) throws InterruptedException {
        // switchTab();
-        sliderTest();
+       // sliderTest();
+      //  findRowByValue("Frank");
+      //  findRowByValueLambda("Frank");
+        rightMouseClick();
+    }
+
+    public static void rightMouseClick() throws InterruptedException {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+        driver.manage().window().maximize();
+        WebElement element = driver.findElement(By
+                .xpath("//a[contains(text(),'Testing')]"));
+        Actions actions = new Actions(driver);
+        actions.contextClick(element).perform();
+
+        Thread.sleep(3000);
+        driver.quit();
+
     }
     @Test
     public static void sliderTest() throws InterruptedException {
@@ -42,8 +61,6 @@ public class WindowAndTabTests {
         // (горизонтальное перемещение). Затем метод perform() применяет это действие.
 
         Thread.sleep(3000);
-
-
 
         /*
         WebElement slider = driver.findElement(By.xpath("//input[@type='range']"));
@@ -127,7 +144,67 @@ public class WindowAndTabTests {
         Thread.sleep(5000);
         driver.quit();
 
-
-
     }
+    @Test
+    public static void waitForAnElement() {
+        WebDriver driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        driver.get("http://the-internet.herokuapp.com/dynamic_loading/2");
+        WebElement buttonStart = driver.findElement(By.xpath("//button"));
+        buttonStart.click();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement textElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.
+                xpath("//div[@id='finish']")));
+        textElement.click();
+
+//        WebElement textElement = driver.findElement(By.xpath("//div[@id='finish']"));
+//        textElement.click();
+
+        driver.quit();
+    }
+@Test
+public static String findRowByValue(String valueToFind) {
+        WebDriver driver = new FirefoxDriver();
+        try {
+            driver.get("https://the-internet.herokuapp.com/tables");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement tableElement = wait.until(ExpectedConditions
+                    .visibilityOfElementLocated(By.tagName("table")));
+            List<WebElement> rows = tableElement.findElements(By.tagName("tr"));
+
+            for (WebElement row : rows) {
+                List<WebElement> cells = row.findElements(By.tagName("td"));
+                for (WebElement cell : cells) {
+                    if (cell.getText().equals(valueToFind)) {
+                        System.out.println(row.getText());
+                        return row.getText();
+                    }
+                }
+            } return null;
+        }finally {
+            driver.quit();
+        }
+}
+
+    @Test
+    public static String findRowByValueLambda(String valueToFind) {
+        WebDriver driver = new FirefoxDriver();
+        try {
+            driver.get("https://the-internet.herokuapp.com/tables");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement tableElement = wait.until(ExpectedConditions
+                    .visibilityOfElementLocated(By.tagName("table")));
+            List<WebElement> rows = tableElement.findElements(By.tagName("tr"));
+
+            Optional<WebElement> optionalRow = rows.stream()
+                    .filter(row -> row.findElements(By.tagName("td")).stream()
+                            .allMatch(cell -> cell.getText().equals(valueToFind))).findFirst();
+
+            return optionalRow.map(WebElement::getText).orElse(null);
+        }finally {
+            driver.quit();
+        }
+    }
+
 }

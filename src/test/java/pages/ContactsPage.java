@@ -2,6 +2,7 @@ package pages;
 
 import model.Contact;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,15 +12,46 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
-public class ContactsPage extends BasePage {
-
+public class ContactsPage extends BasePage{
     @FindBy(xpath = "//button[contains(text(),'Sign')]")
     WebElement signOutButton;
 
-    public ContactsPage(WebDriver driver) {
+    public ContactsPage(WebDriver driver){
         setDriver(driver);
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
+    }
+    public int deleteContactByPhoneNumberOrName(String phoneNumberOrName) {
+        List<WebElement> contactsList = getContactsList();
+        int initSize = contactsList.size();
+        try {
+            for (WebElement contact : contactsList) {
+                WebElement phoneNumberData = contact.findElement(By
+                        .xpath("//h2[text()='"+phoneNumberOrName+"'] | //h3[text()='"+phoneNumberOrName+"']"));
+                if (phoneNumberData.isDisplayed()) {
+                    phoneNumberData.click();
+                    clickRemoveButton();
+                    break; // Для прекращения цикла после удаления контакта
+                }
+            }}catch (NoSuchElementException exception){exception.fillInStackTrace();
+            System.out.println("Item with phone number "+phoneNumberOrName+" was not found. ");}
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        wait.until(ExpectedConditions
+                .numberOfElementsToBe(By.xpath("//div[@class='contact-item_card__2SOIM']"), initSize - 1));
+
+        return contactsList.size();
+    }
+
+    protected List<WebElement> getContactsList(){
+        return driver.findElements(By.xpath("//div[@class='contact-item_card__2SOIM']"));
+    }
+    public int getContactsListSize(){
+        return getContactsList().size();
+    }
+    public void clickRemoveButton(){
+        WebElement removeButton = driver.findElement(By.xpath("//button[text()='Remove']"));
+        removeButton.click();
     }
 
     public boolean isElementPersist(WebElement element){
@@ -31,20 +63,17 @@ public class ContactsPage extends BasePage {
      * @param contact
      * @return boolean
      */
-
     public boolean getDataFromContactList(Contact contact){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); // Создается объект класса WebDriverWait,
         // который ожидает видимости элемента на странице в течение 5 секунд.
         WebElement nameInContact = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(
-                        By.xpath("//h2[contains(text(),'"+contact.getName().toString()+"')]")));
-        // Ожидается появление элемента с именем контакта, переданного в методе, используя XPath.
+                        By.xpath("//h2[contains(text(),'"+contact.getName().toString()+"')]"))); // Ожидается появление элемента с именем контакта, переданного в методе, используя XPath.
         nameInContact.click();
         WebElement editButton = driver
                 .findElement(By.xpath("//button[contains(text(),'Edit')]"));
         editButton.click();
-// находим элементы веб-страницы для каждого поля контакта (имя, фамилия, телефон, email, адрес и описание) и получаем
-// их значения с помощью метода getAttribute("value").
+// находим элементы веб-страницы для каждого поля контакта (имя, фамилия, телефон, email, адрес и описание) и получаем их значения с помощью метода getAttribute("value").
         WebElement elementName = driver.findElement(By.xpath("//input[@placeholder='Name']"));
         String elementNameValue = elementName.getAttribute("value");
 
@@ -70,11 +99,8 @@ public class ContactsPage extends BasePage {
         listContact.setEmail(elementEmailValue);
         listContact.setAddress(elementAddressValue);
         listContact.setDescription(elementDescriptionValue);
-        boolean result = listContact.equals(contact);// Выполняется сравнение переданного объекта Contact с объектом
-        // listContact, созданным на основе данных, полученных со страницы.
+        boolean result = listContact.equals(contact); // Выполняется сравнение переданного объекта Contact с объектом listContact, созданным на основе данных, полученных со страницы.
         return result; // Метод возвращает результат сравнения в виде логического значения true или false.
     }
 
 }
-
-
