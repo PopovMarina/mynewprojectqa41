@@ -7,6 +7,9 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import model.Contact;
 import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -18,6 +21,8 @@ import pages.MainPage;
 
 import java.io.IOException;
 import java.sql.Driver;
+import java.time.Duration;
+import java.util.List;
 import java.util.TooManyListenersException;
 
 public class PhoneBookTest extends BaseTest {
@@ -141,6 +146,43 @@ public class PhoneBookTest extends BaseTest {
         Contact deserContact = Contact.desiarializeContact(filename);
         Assert.assertNotEquals(contactsPage.deleteContactByPhoneNumberOrName(deserContact.getPhone()),
                 contactsPage.getContactsListSize());
+
+    }
+
+    @Test
+    public void registrationOfAnAlreadyRegisteredUser() {
+     //   WebDriver driver = new FirefoxDriver();
+        Allure.description("User already exist. Registration of an already registrated user!");
+        MainPage mainPage = new MainPage(getDriver());
+        Allure.step("Open Registration page");
+        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        Allure.step("Fill in email and password by resources");
+//        lpage.fillEmailField(EmailGenerator.generateEmail(10,5,3))
+//                .fillPasswordField(PasswordStringGenerator.generateString());
+        lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
+                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+                .clickByRegistrationButton();
+        Allure.step("Make sure that Sign out [button] was displayed");
+        WebElement signOutButton = getDriver().findElement(By.xpath("//button[contains(text(),'Sign')]"));
+        signOutButton.click();
+        TakeScreen.takeScreenshot("screen");
+        Allure.step("Fill in email and password that already exist");
+//        lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
+//                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+//                .clickByRegistrationButton();
+        Allure.step("Make sure that Allert [User already exist] was displayed");
+        String exectedString = "exist";
+
+        Alert alert = lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
+                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+                .clickByRegistrationButton();
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebElement alert1 = (WebElement) wait.until(ExpectedConditions.alertIsPresent());
+        boolean isAllertHandled = AlertHandler.handleAlert(alert,exectedString);
+
+        Assert.assertTrue(isAllertHandled);
+
+
 
     }
 }
