@@ -4,82 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 9">
+    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Homework 9">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/00706d65-69d4-4e4b-bca5-32b38c80410c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/06c913c2-60b1-4e48-ba5c-9a35d506782d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/070bf5d0-0a46-453e-84c9-583b7ee8013f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/0818f1b0-8423-4941-a1d2-aceab6369b9b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/0eb4ca68-d9c1-4020-a5ce-a5c508ac2da1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/0f7c92c7-0a35-47e1-b94d-64ecb80781f1-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/15bff45a-141a-4fc9-a4c2-36cbdd93f6db-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/17fd2546-8e58-4fbf-8108-82f65b29883f-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/185884d6-77e2-40f9-97de-8220d6479ce0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1b5fb005-8429-49b4-bc14-5d97ff032603-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1bb541af-8087-45d0-86a9-cfaf283d1001-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/1d051c8d-2ddf-4b2b-8e23-9536991a004c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2036840e-ff49-4bd1-be77-005058a3dfd7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/20d66330-abc1-407f-925c-4ff8bffb94e7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/21ea46f8-cc81-4a1b-9ee7-232878f8af26-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/23ff49a9-90ec-4bc7-b182-90f64c3c63e4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2642cf00-fa8c-4808-8d8c-be713edfd427-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2a6ec6ee-ad3c-4228-8323-59e4f6507ff0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2c192c52-02ae-43b2-9cf3-adab910425b0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2ea7fb45-d477-484e-ab75-9ff4a64fc869-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/2fe4ef54-c522-457f-a358-72b17cf210c2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/33cc451a-8fc2-4971-bec9-b02a78a563ce-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/354f8eba-e3c9-47bc-b736-a97c7a45206a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/3650d3c0-b506-42c8-b352-2a303ca3627c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/371283ea-1605-4b1a-9076-8a38919c6b4d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/38e4d5d4-5734-4781-bc5a-412c445dfa79-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/392b7034-7d58-4841-9f22-ebdc520a0eb4-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/3ea570c4-e99d-4f23-90e4-006e5bbc6d54-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/3f6119c1-2dbf-408e-b4de-30b64cca0b0d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/41cb2bf1-1aeb-4ee3-8111-73bd4045ca65-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/44827dd4-81d4-4042-bb04-8425c595ec5c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/471adb23-979e-446f-9230-d6579e9f3b6d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/4a91e74c-b7a5-4fef-8dae-6c52a1ed5d03-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/6467cd05-4ab4-4e97-adc0-ff44a7935440-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/695ba3ec-60fe-4943-9f86-09269ebf50b7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/696ea22d-5488-40dd-9329-877b0df3f6e0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/6b9c07d8-193e-4491-9a22-1789047200bc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/6c71f0f1-bc68-4a30-804d-7c9bf2b36bd6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/75cddb8b-83c5-465f-98e7-434aaacbf82a-attachment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/77604af8-bd71-447d-a8ad-2f3a19965423-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/79520654-e43a-4a77-874c-be7b49253693-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/7dc20b29-465b-4a7d-aac7-c8c25b56b1da-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8132d8e7-d96d-47ee-9590-2b1d1afed850-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/87f66707-9884-4ba6-b3ea-c420ec9ec292-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8ab22274-4914-47bb-9b09-c3338484d288-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/8c2a7e88-b610-445c-8ca9-f2a0248a179d-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/90074dbf-fa2b-46de-a7f5-6249edc17244-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/93aab199-588f-401e-b703-977a30abb94c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/977446d7-cec3-4b10-adbc-37c84358f097-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a103e1a1-d96e-4251-9209-17ae7452a882-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a19ed281-0894-4989-a515-b949de23585e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a206d11d-6a8d-4375-a21f-b4aa2e993add-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a351c306-f35b-4984-ac6e-fb973a63fc37-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/a665c331-1117-4144-84bb-b6fb30a93b50-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/ad614259-6994-4ee0-942f-6a740b22f225-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/b3fefae3-8d65-4c47-a757-b2da0352e956-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/b493207e-888a-4a6a-bbd1-33cd185b6a66-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/b71bdfd0-b34d-4a44-bbc2-99a6fc43e1a6-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/bd56a300-5f54-456f-94e9-38762fd11fa0-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c34010fc-7a8f-4d38-bcea-e227b37787cc-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c410721c-f89b-466e-b740-6627407e6214-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/c6b0238d-b3b6-4376-8720-9c07607374e0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/cfbe5e8b-41d0-45f0-a894-dcd6a02b317a-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/d087a493-874d-4666-9774-a3b03bbe8eca-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/db2f165c-130f-4d88-b213-56269c7420c2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/dd8c1f40-78d0-4049-a4cb-a7ddcad8453b-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/de9ae402-b7f7-44c4-9baf-dfbea77cc7f0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e68b50ea-ae30-4504-b54c-0d7149308602-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/e93f118f-e3b8-4dac-a75b-1a9cf046cfa7-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/eef41ea8-c63c-4b01-bafd-ec1c25060a15-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/allure-results/fd8d01b0-ec4b-4183-a34a-753f4409ff0c-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/screen_1710369774868.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/resources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/resources.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,34 +34,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.AssertionTest.executor": "Run",
-    "Application.PropertiesWriter.executor": "Run",
-    "Application.WindowAndTabTests.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.AssertionTest.failTest.executor": "Run",
-    "TestNG.AssertionTest.testDevideByZero.executor": "Run",
-    "TestNG.PhoneBookTest.deleteContactApproachTwo.executor": "Run",
-    "TestNG.PhoneBookTest.deleteContanctApproachTwo.executor": "Run",
-    "TestNG.PhoneBookTest.loginOfAnExistingUserAddContact.executor": "Run",
-    "TestNG.PhoneBookTest.registrationOfAnAlreadyRegisteredUser.executor": "Run",
-    "TestNG.PhoneBookTest.registrationWithoutPassword.executor": "Run",
-    "TestNG.PhoneBookTest.successfulRegistration.executor": "Run",
-    "TestNG.WindowAndTabTests.dragAndDropTest.executor": "Run",
-    "TestNG.WindowAndTabTests.executor": "Run",
-    "TestNG.WindowAndTabTests.sliderTest.executor": "Debug",
-    "TestNG.WindowAndTabTests.waitForAnElement.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/marina/Documents/Java/mynewprojectqa41/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.AssertionTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PropertiesWriter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WindowAndTabTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.AssertionTest.failTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AssertionTest.testDevideByZero.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.deleteContactApproachTwo.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.deleteContanctApproachTwo.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.loginOfAnExistingUserAddContact.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.registrationOfAnAlreadyRegisteredUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.registrationWithoutPassword.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PhoneBookTest.successfulRegistration.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WindowAndTabTests.dragAndDropTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WindowAndTabTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WindowAndTabTests.sliderTest.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.WindowAndTabTests.waitForAnElement.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/marina/Documents/Java/mynewprojectqa41/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="TestNG.PhoneBookTest.registrationOfAnAlreadyRegisteredUser">
     <configuration name="PropertiesWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="helpers.PropertiesWriter" />
@@ -257,13 +185,22 @@
       <option name="project" value="LOCAL" />
       <updated>1710497167772</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Homework 9">
+      <option name="closed" value="true" />
+      <created>1710619933276</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710619933276</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson 8" />
     <MESSAGE value="Lesson 9" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9" />
+    <MESSAGE value="Homework 9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework 9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -305,7 +242,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java</url>
-          <line>169</line>
+          <line>172</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

@@ -157,11 +157,14 @@ public class PhoneBookTest extends BaseTest {
         Allure.step("Open Registration page");
         LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
         Allure.step("Fill in email and password by resources");
-//        lpage.fillEmailField(EmailGenerator.generateEmail(10,5,3))
-//                .fillPasswordField(PasswordStringGenerator.generateString());
-        lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
-                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
-                .clickByRegistrationButton();
+        String email = EmailGenerator.generateEmail(10,5,3);
+        String password = PasswordStringGenerator.generateString();
+
+        lpage.fillEmailField(email)
+                .fillPasswordField(password).clickByRegistrationButton();
+//        lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
+//                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+//                .clickByRegistrationButton();
         Allure.step("Make sure that Sign out [button] was displayed");
         WebElement signOutButton = getDriver().findElement(By.xpath("//button[contains(text(),'Sign')]"));
         signOutButton.click();
@@ -173,16 +176,17 @@ public class PhoneBookTest extends BaseTest {
         Allure.step("Make sure that Allert [User already exist] was displayed");
         String exectedString = "exist";
 
-        Alert alert = lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
-                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+//        Alert alert = lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
+//                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
+//                .clickByRegistrationButton();
+        Alert alert = lpage.fillEmailField(email)
+                .fillPasswordField(password)
                 .clickByRegistrationButton();
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        WebElement alert1 = (WebElement) wait.until(ExpectedConditions.alertIsPresent());
+
+          //  WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
         boolean isAllertHandled = AlertHandler.handleAlert(alert,exectedString);
-
         Assert.assertTrue(isAllertHandled);
-
-
 
     }
 }

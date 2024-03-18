@@ -73,7 +73,7 @@ public class LoginPage extends BasePage{
 
     private Alert getAlertIfPresent() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(5000));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
             // Создается новый объект класса WebDriverWait,
             // который ожидает определенный период времени (в данном случае 5000 миллисекунд или 5 секунд).
             // Он используется для ожидания появления всплывающего окна.
