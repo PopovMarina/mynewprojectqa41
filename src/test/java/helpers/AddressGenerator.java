@@ -17,7 +17,7 @@ public class AddressGenerator {
      * Метод возвращает случайно сгенерированный адрес в формате строки.
      * @return String
      */
-    public static String generateAddress() {
+    public static String generateAddress(String string) {
 
         // Выбирается случайный город из массива cities.
         String city = cities[random.nextInt(cities.length)];
