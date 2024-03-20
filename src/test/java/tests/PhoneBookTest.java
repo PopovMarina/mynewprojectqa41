@@ -6,6 +6,7 @@ import helpers.*;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import model.Contact;
+import model.User;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -188,5 +189,34 @@ public class PhoneBookTest extends BaseTest {
         boolean isAllertHandled = AlertHandler.handleAlert(alert,exectedString);
         Assert.assertTrue(isAllertHandled);
 
+    }
+    @Test
+    @Description("Registration attempt test.")
+    public void reRegistrationAttempt() {
+        boolean res = false;
+        Allure.description("Registration attempt test.");
+        MainPage mainPage = new MainPage(getDriver());
+        Allure.step("Open LOGIN menu");
+        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+
+        User user = new User(EmailGenerator.generateEmail(7,7,3),
+               PasswordStringGenerator.generateString());
+        //System.out.println("USER_MAIL : "+user.getUserEmail() + " PASS: " +user.getUserPassword());
+
+        lpage.fillEmailField(user.getUserEmail())
+                .fillPasswordField(user.getUserPassword());
+        Alert alert = lpage.clickByRegistrationButton();
+        if (alert == null) {
+            ContactsPage contactsPage = new ContactsPage(getDriver());
+            lpage = contactsPage.clickBySignOutButton();
+            Alert alert1 = lpage.fillEmailField(user.getUserEmail())
+                    .fillPasswordField(user.getUserPassword()).clickByRegistrationButton();
+            if(alert1 != null) {
+                res = AlertHandler.handleAlert(alert1, "exist");
+            }
+        }else {
+            System.out.println("reRegistrationAttempt");
+        }
+        Assert.assertTrue(res, "Registration attempt failed");
     }
 }

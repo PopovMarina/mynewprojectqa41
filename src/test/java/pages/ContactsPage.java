@@ -22,6 +22,12 @@ public class ContactsPage extends BasePage{
         setDriver(driver);
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
     }
+
+    public LoginPage clickBySignOutButton() {
+        signOutButton.click();
+        return new LoginPage(driver);
+    }
+
     public int deleteContactByPhoneNumberOrName(String phoneNumberOrName) {
         List<WebElement> contactsList = getContactsList();
         int initSize = contactsList.size();
