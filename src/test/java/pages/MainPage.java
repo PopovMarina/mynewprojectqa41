@@ -32,7 +32,7 @@ public class MainPage extends BasePage{
         switch (topMenuItem){
             case "HOME":
                 return (T) new HomePage(driver);
-                // new HomePage(driver): Это оператор создания нового объекта класса HomePage. Здесь driver передается
+            // new HomePage(driver): Это оператор создания нового объекта класса HomePage. Здесь driver передается
             // в качестве аргумента конструктору класса HomePage. пример использования обобщенного программирования
             // в Java (T): Это оператор приведения типа (type casting). В данном случае (T) означает, что мы приводим созданный объект к типу T.
             case "ABOUT":

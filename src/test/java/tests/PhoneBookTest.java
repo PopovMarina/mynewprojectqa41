@@ -85,8 +85,8 @@ public class PhoneBookTest extends BaseTest {
         Thread.sleep(3000);
 
     }
-        @Test(description = "Successful registration.")
-        @Parameters("browser")
+    @Test(description = "Successful registration.")
+    @Parameters("browser")
     public void successfulRegistration() throws InterruptedException {
         Allure.description("Successful registration");
         MainPage mainPage = new MainPage(getDriver());
@@ -109,7 +109,7 @@ public class PhoneBookTest extends BaseTest {
 //       Assert.assertTrue(signOut.isDisplayed());
 //       Thread.sleep(5000);
 
-        }
+    }
 
     @Test
     public void deleteContact() throws InterruptedException {
@@ -152,7 +152,7 @@ public class PhoneBookTest extends BaseTest {
 
     @Test
     public void registrationOfAnAlreadyRegisteredUser() {
-     //   WebDriver driver = new FirefoxDriver();
+        //   WebDriver driver = new FirefoxDriver();
         Allure.description("User already exist. Registration of an already registrated user!");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Open Registration page");
@@ -184,7 +184,7 @@ public class PhoneBookTest extends BaseTest {
                 .fillPasswordField(password)
                 .clickByRegistrationButton();
 
-          //  WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        //  WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
         boolean isAllertHandled = AlertHandler.handleAlert(alert,exectedString);
         Assert.assertTrue(isAllertHandled);
@@ -200,7 +200,7 @@ public class PhoneBookTest extends BaseTest {
         LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
 
         User user = new User(EmailGenerator.generateEmail(7,7,3),
-               PasswordStringGenerator.generateString());
+                PasswordStringGenerator.generateString());
         //System.out.println("USER_MAIL : "+user.getUserEmail() + " PASS: " +user.getUserPassword());
 
         lpage.fillEmailField(user.getUserEmail())
