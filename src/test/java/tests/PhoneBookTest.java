@@ -1,6 +1,5 @@
 package tests;
 
-import com.beust.ah.A;
 import config.BaseTest;
 import helpers.*;
 import io.qameta.allure.Allure;
@@ -8,9 +7,6 @@ import io.qameta.allure.Description;
 import model.Contact;
 import model.User;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -21,14 +17,11 @@ import pages.LoginPage;
 import pages.MainPage;
 
 import java.io.IOException;
-import java.sql.Driver;
-import java.time.Duration;
-import java.util.List;
-import java.util.TooManyListenersException;
 
 public class PhoneBookTest extends BaseTest {
 
-    @Test(description = "The test checks the empty field warning declaration.")
+    @Test(groups = "group1", description = "The test checks the empty field warning declaration.",
+    retryAnalyzer = RetryAnalyzer.class)
     @Parameters("browser")
     public void registrationWithoutPassword(@Optional("chrome") String browser) throws InterruptedException {
         Allure.description("User already exist. Login and add contact.!");
@@ -41,12 +34,12 @@ public class PhoneBookTest extends BaseTest {
 
         Allure.step("Click by Login button");
         //Степс - шаги, которые происходят во время теста, если упадет - будет видно на каком шаге
-        LoginPage loginPage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage loginPage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         Allure.step("Click by Red button");
         String  expectedString = "Wrong";//эта строчка должна быть в другом месте
         //в отдельном классе настроек
 
-        Alert alert = loginPage.fillEmailField("poi7777@mail.rut").clickByRegistrationButton();
+        Alert alert = loginPage.fillEmailField("poi777887@mail.rut").clickByRegistrationButton();
         //loginPage.fillPasswordField("Mana17$").clickByLoginButton();
         boolean isAlertHandled = AlertHandler.handleAlert(alert, expectedString);
         //handlerAlert - метод обратотки окошка,которое появится
@@ -55,14 +48,14 @@ public class PhoneBookTest extends BaseTest {
 //        loginPage.fillEmailField("poi1@mail.ru").fillPasswordField("Naa1234$").clickByLoginButton();
 //        Thread.sleep(8000);
     }
-    @Test
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     @Description("User already exist. Login and add contact.")
     public void loginOfAnExistingUserAddContact() throws InterruptedException {
 
         Allure.description("User already exist. Login and add contact.!");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Step 1");
-        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage lpage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         Allure.step("Step 2");
 
         //lpage.fillEmailField("poi7777@mail.rut").clickByLoginButton();
@@ -70,7 +63,7 @@ public class PhoneBookTest extends BaseTest {
                 .fillPasswordField((PropertiesReader.getProperty("existingUserPassword")))
                 .clickByLoginButton();
         Allure.step("Step 3");
-        MainPage.openTopMenu(TopMenuItem.ADD.toString());
+        MainPage.openTopMenu(getDriver(), TopMenuItem.ADD.toString());
         AddPage addPage = new AddPage(getDriver());
         Contact newContact = new Contact(NameAndLastNameGenerator.generateName(),
                 NameAndLastNameGenerator.generateLastName(),
@@ -81,7 +74,7 @@ public class PhoneBookTest extends BaseTest {
         addPage.fillFormAndSave(newContact);
         ContactsPage contactsPage = new ContactsPage(getDriver());
         Assert.assertTrue(contactsPage.getDataFromContactList(newContact));
-        TakeScreen.takeScreenshot("screen");
+        TakeScreen.takeScreenshot(getDriver(),"screen");
         Thread.sleep(3000);
 
     }
@@ -91,7 +84,7 @@ public class PhoneBookTest extends BaseTest {
         Allure.description("Successful registration");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Open Registration page");
-        LoginPage loginPage = MainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage loginPage = MainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         Allure.step("Fill in email and password by generator");
         loginPage.fillEmailField(EmailGenerator.generateEmail(10,5,3))
                 .fillPasswordField(PasswordStringGenerator.generateString());
@@ -102,7 +95,7 @@ public class PhoneBookTest extends BaseTest {
             Assert.assertTrue(contactsPage.isElementPersist(getDriver()
                     .findElement(By.xpath("//button[contains(text(),'Sign')]"))));
         }else {
-            TakeScreen.takeScreenshot("Successful registration");
+            TakeScreen.takeScreenshot(getDriver(),"Successful registration");
         }
 //        TakeScreen.takeScreenshot("screen");
 //        WebElement signOut = getDriver().findElement(By.xpath("//button[contains(text(),'Sign')]"));
@@ -116,7 +109,7 @@ public class PhoneBookTest extends BaseTest {
         Allure.description("User already exist. Delete contact by phone number!");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Step 1");
-        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage lpage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         Allure.step("Step 2");
         lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
                 .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
@@ -131,11 +124,11 @@ public class PhoneBookTest extends BaseTest {
     public void deleteContactApproachTwo() throws IOException {
         String filename = "contactDataFile.ser";
         MainPage mainPage = new MainPage(getDriver());
-        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage lpage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
                 .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
                 .clickByLoginButton();
-        MainPage.openTopMenu(TopMenuItem.ADD.toString());
+        MainPage.openTopMenu(getDriver(), TopMenuItem.ADD.toString());
         AddPage addPage = new AddPage(getDriver());
         Contact newContact = new Contact(NameAndLastNameGenerator.generateName(),NameAndLastNameGenerator.generateLastName(),
                 PhoneNumberGenerator.generatePhoneNumber(),
@@ -156,7 +149,7 @@ public class PhoneBookTest extends BaseTest {
         Allure.description("User already exist. Registration of an already registrated user!");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Open Registration page");
-        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage lpage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
         Allure.step("Fill in email and password by resources");
         String email = EmailGenerator.generateEmail(10,5,3);
         String password = PasswordStringGenerator.generateString();
@@ -169,7 +162,7 @@ public class PhoneBookTest extends BaseTest {
         Allure.step("Make sure that Sign out [button] was displayed");
         WebElement signOutButton = getDriver().findElement(By.xpath("//button[contains(text(),'Sign')]"));
         signOutButton.click();
-        TakeScreen.takeScreenshot("screen");
+        TakeScreen.takeScreenshot(getDriver(),"screen");
         Allure.step("Fill in email and password that already exist");
 //        lpage.fillEmailField(PropertiesReader.getProperty("existingUserEmail"))
 //                .fillPasswordField(PropertiesReader.getProperty("existingUserPassword"))
@@ -197,7 +190,7 @@ public class PhoneBookTest extends BaseTest {
         Allure.description("Registration attempt test.");
         MainPage mainPage = new MainPage(getDriver());
         Allure.step("Open LOGIN menu");
-        LoginPage lpage = mainPage.openTopMenu(TopMenuItem.LOGIN.toString());
+        LoginPage lpage = mainPage.openTopMenu(getDriver(), TopMenuItem.LOGIN.toString());
 
         User user = new User(EmailGenerator.generateEmail(7,7,3),
                 PasswordStringGenerator.generateString());

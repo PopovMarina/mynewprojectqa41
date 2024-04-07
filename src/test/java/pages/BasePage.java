@@ -7,7 +7,14 @@ import org.openqa.selenium.WebElement;
 // BasePage служит базовым классом для всех страниц тестового приложения
 public class BasePage {
 
+        public BasePage() {
+        }
+
     protected static WebDriver driver;
+
+public BasePage(WebDriver webDriver) {
+}
+
     public static void setDriver(WebDriver webDriver){
         // Метод устанавливает значение поля driver в переданный экземпляр веб-драйвера.
         driver=webDriver;

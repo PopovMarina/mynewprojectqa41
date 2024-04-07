@@ -10,15 +10,74 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.BasePage;
 
 import java.time.Duration;
 
+
+public class BaseTest {
+    private WebDriver driver;
+
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+    private void initializeDriver(String browser){
+        if (browser.equalsIgnoreCase("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--lang=en");
+            driver = new ChromeDriver(options);
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            FirefoxOptions options = new FirefoxOptions();
+            options.addPreference("intl.accept_languages", "en");
+            driver = new FirefoxDriver(options);
+        } else {
+            throw new IllegalArgumentException("Invalid browser " + browser);
+        }
+    }
+    @BeforeTest
+    @Parameters("browser")
+    public void setUp(@Optional("firefox") String browser) {
+        initializeDriver(browser);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(20000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(20000));
+    }
+
+    @AfterTest
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+    @BeforeGroups(groups = {"group1"})
+    public void setUpForGroup1() {
+        initializeDriver("firefox");
+        WebDriver driver = getDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //BasePage.setDriver(driver);
+    }
+    @AfterGroups(groups = {"group1"})
+    public void tearDownGroup() {
+        WebDriver driver = getDriver();
+        if (driver != null) {
+            driver.quit();
+
+            //driverThreadLocal.remove();
+        }
+    }
+
+
+/*
 public class BaseTest { // Эта строка объявляет начало определения класса BaseTest. Класс является шаблоном или чертежом для создания объектов.
+
+
     private static final ThreadLocal<WebDriver> driverThreadLocal
             = new ThreadLocal<>(); //Эта строка объявляет статическое приватное поле driverThreadLocal, которое является объектом класса ThreadLocal. Он используется для хранения объектов типа WebDriver в потоке исполнения.
     // ThreadLocal - это класс в Java, который позволяет создавать локальные переменные, специфичные для каждого потока.
@@ -36,16 +95,18 @@ public class BaseTest { // Эта строка объявляет начало �
     @Parameters("browser")
     public void setUp(@Optional("firefox") String browser){
 
+        initializerDriver(browser);
+
         // Этот блок кода проверяет, является ли значение параметра browser равным "chrome".
         // Если да, то он настраивает ChromeDriver и добавляет опции для запуска браузера на английском языке.
         if(browser.equalsIgnoreCase("chrome")){
 
-            /**
-             * Для использования Хрома версий выше 114, можно попробовать использовать
-             * WebDriverManager.chromedriver().browserVersion("122.0.6261.69").setup();
-             * Вместо WebDriverManager.chromedriver().setup(); - Закоментируйте строку, а вместо "121.0.6167.185" подставте версию вашего браузера.
-             *
-             */
+
+//             * Для использования Хрома версий выше 114, можно попробовать использовать
+//             * WebDriverManager.chromedriver().browserVersion("122.0.6261.69").setup();
+//             * Вместо WebDriverManager.chromedriver().setup(); - Закоментируйте строку, а вместо "121.0.6167.185" подставте версию вашего браузера.
+
+
             WebDriverManager.chromedriver().browserVersion("122.0.6261.69").setup();
             //WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
@@ -97,5 +158,7 @@ public class BaseTest { // Эта строка объявляет начало �
             driverThreadLocal.remove(); // Удаляем текущий экземпляр WebDriver из объекта driverThreadLocal.
         }
     }
+
+*/
 
 }

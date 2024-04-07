@@ -7,8 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class MainPage extends BasePage{
+    //private WebDriver driver;
 
     public MainPage(WebDriver driver){ // конструктор класса MainPage, который принимает объект WebDriver в качестве параметра.
+
+        super(driver);
         setDriver(driver); // Устанавливает переданный объект WebDriver в качестве драйвера для экземпляра класса MainPage
         driver.get("https://telranedu.web.app/"); // Переходит на указанный URL-адрес веб-страницы с помощью метода get
         PageFactory.initElements(new AjaxElementLocatorFactory(driver,20), this); /* Инициализирует элементы страницы с помощью PageFactory.
@@ -19,11 +22,13 @@ public class MainPage extends BasePage{
 
     /**
      * Возвращаем объект страницы в зависимости от переданного параметра
+     *
+     * @param <T>         Это обобщённый тип данных.
+     * @param driver
      * @param topMenuItem - параметр, который получаем из enum TopMenuItem
      * @return Любой тип, наследованый от BasePage
-     * @param <T> Это обобщённый тип данных.
      */
-    public static <T extends BasePage> T openTopMenu(String topMenuItem){
+    public static <T extends BasePage> T openTopMenu(WebDriver driver, String topMenuItem){
         //  <T extends BasePage>: Это обобщённый тип данных.
         // Он объявляет тип T,который является подтипом класса BasePage.
         WebElement menuItem = driver.findElement(By.xpath("//a[contains(text(),'"+topMenuItem+"')]"));
