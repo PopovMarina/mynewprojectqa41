@@ -17,6 +17,8 @@ import java.time.Duration;
 
 
 public class BaseTest {
+
+  //  public static String serverurl;
     private WebDriver driver;
 
 
@@ -39,8 +41,11 @@ public class BaseTest {
         }
     }
     @BeforeTest
-    @Parameters("browser")
+    @Parameters({"browser"})//"server"})
     public void setUp(@Optional("firefox") String browser) {
+                    //  @Optional("https://telranedu.web.app/home") String server) {
+//        serverurl = server;
+//        System.out.println("ServerURL: " + serverurl + " - " + "Server: " + server);
         initializeDriver(browser);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofMillis(20000));
@@ -73,6 +78,9 @@ public class BaseTest {
         }
     }
 
+//    public static void main(String[] args) {
+//        System.out.println("Variable: " + System.getenv("Path"));
+//    }
 
 /*
 public class BaseTest { // Эта строка объявляет начало определения класса BaseTest. Класс является шаблоном или чертежом для создания объектов.

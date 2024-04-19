@@ -1,5 +1,6 @@
 package pages;
 
+import config.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,10 +10,15 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 public class MainPage extends BasePage{
     //private WebDriver driver;
 
+
+
     public MainPage(WebDriver driver){ // конструктор класса MainPage, который принимает объект WebDriver в качестве параметра.
+
+     //   String url = BaseTest.serverurl;
 
         super(driver);
         setDriver(driver); // Устанавливает переданный объект WebDriver в качестве драйвера для экземпляра класса MainPage
+     //   driver.get(url);
         driver.get("https://telranedu.web.app/"); // Переходит на указанный URL-адрес веб-страницы с помощью метода get
         PageFactory.initElements(new AjaxElementLocatorFactory(driver,20), this); /* Инициализирует элементы страницы с помощью PageFactory.
          *     Она ищет все аннотированные элементы @FindBy в классе MainPage и связывает их с реальными элементами веб-страницы.

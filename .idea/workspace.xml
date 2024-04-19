@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="02/04/24 Lesson 14">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/PhoneBookGroupTest.java" afterDir="false" />
+    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 14 - group1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contactDataFile.ser" beforeDir="false" afterPath="$PROJECT_DIR$/contactDataFile.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/PropertiesReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/RetryAnalizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/RetryAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helpers/TakeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helpers/TakeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/resources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/resources.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +39,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.AssertionTest.executor": "Run",
+    "Application.BaseTest.executor": "Run",
     "Application.LottoTest.executor": "Run",
     "Application.Lottotest.executor": "Run",
     "Application.PropertiesWriter.executor": "Run",
@@ -89,7 +79,20 @@
       <recent name="$PROJECT_DIR$/src/file" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PhoneBookGroupTest.registrationWithoutPassword">
+  <component name="RunManager" selected="TestNG.PhoneBookTest.successfulRegistration">
+    <configuration name="BaseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="config.BaseTest" />
+      <module name="mynewprojectqa41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PhoneBookGroupTest.registrationWithoutPassword" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
@@ -108,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneBookTest.deleteContactApproachTwo" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PhoneBookTest.loginOfAnExistingUserAddContact" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
         <pattern>
@@ -118,43 +121,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
-      <option name="METHOD_NAME" value="deleteContactApproachTwo" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PhoneBookTest.reRegistrationAttempt" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mynewprojectqa41" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
-      <option name="METHOD_NAME" value="reRegistrationAttempt" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PhoneBookTest.registrationOfAnAlreadyRegisteredUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mynewprojectqa41" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
-      <option name="METHOD_NAME" value="registrationOfAnAlreadyRegisteredUser" />
+      <option name="METHOD_NAME" value="loginOfAnExistingUserAddContact" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -180,13 +147,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PhoneBookTest.successfulRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mynewprojectqa41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
+      <option name="METHOD_NAME" value="successfulRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PhoneBookGroupTest.registrationWithoutPassword" />
+        <item itemvalue="TestNG.PhoneBookTest.successfulRegistration" />
+        <item itemvalue="TestNG.PhoneBookTest.loginOfAnExistingUserAddContact" />
         <item itemvalue="TestNG.PhoneBookTest.registrationWithoutPassword" />
-        <item itemvalue="TestNG.PhoneBookTest.reRegistrationAttempt" />
-        <item itemvalue="TestNG.PhoneBookTest.registrationOfAnAlreadyRegisteredUser" />
-        <item itemvalue="TestNG.PhoneBookTest.deleteContactApproachTwo" />
+        <item itemvalue="TestNG.PhoneBookGroupTest.registrationWithoutPassword" />
+        <item itemvalue="Application.BaseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712087547172</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Lesson 14 - group1">
+      <option name="closed" value="true" />
+      <created>1712525566635</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712525566635</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +268,8 @@
     <MESSAGE value="Homework 9_18.03.24" />
     <MESSAGE value="Lesson 10" />
     <MESSAGE value="02/04/24 Lesson 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="02/04/24 Lesson 14" />
+    <MESSAGE value="Lesson 14 - group1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 14 - group1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
