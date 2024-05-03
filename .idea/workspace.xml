@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 14 - group1">
+    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 19">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DataPickerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/config/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/config/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,7 @@
     "TestNG.AssertionTest.failTest.executor": "Run",
     "TestNG.AssertionTest.testCalc.executor": "Run",
     "TestNG.AssertionTest.testDevideByZero.executor": "Run",
+    "TestNG.DataPickerTest.datapickerTest.executor": "Run",
     "TestNG.PhoneBookGroupTest.registrationWithoutPassword.executor": "Run",
     "TestNG.PhoneBookTest.deleteContact.executor": "Run",
     "TestNG.PhoneBookTest.deleteContactApproachTwo.executor": "Run",
@@ -79,16 +79,21 @@
       <recent name="$PROJECT_DIR$/src/file" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PhoneBookTest.successfulRegistration">
-    <configuration name="BaseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="config.BaseTest" />
+  <component name="RunManager" selected="TestNG.DataPickerTest.datapickerTest">
+    <configuration name="DataPickerTest.datapickerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="config.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DataPickerTest" />
+      <option name="METHOD_NAME" value="datapickerTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PhoneBookTest.successfulRegistration" />
-        <item itemvalue="TestNG.PhoneBookTest.loginOfAnExistingUserAddContact" />
-        <item itemvalue="TestNG.PhoneBookTest.registrationWithoutPassword" />
+        <item itemvalue="TestNG.DataPickerTest.datapickerTest" />
         <item itemvalue="TestNG.PhoneBookGroupTest.registrationWithoutPassword" />
-        <item itemvalue="Application.BaseTest" />
+        <item itemvalue="TestNG.PhoneBookTest.loginOfAnExistingUserAddContact" />
+        <item itemvalue="TestNG.PhoneBookTest.successfulRegistration" />
+        <item itemvalue="TestNG.PhoneBookTest.registrationWithoutPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712525566635</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Lesson 19">
+      <option name="closed" value="true" />
+      <created>1713558516678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713558516678</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,7 +282,8 @@
     <MESSAGE value="Lesson 10" />
     <MESSAGE value="02/04/24 Lesson 14" />
     <MESSAGE value="Lesson 14 - group1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 14 - group1" />
+    <MESSAGE value="Lesson 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -323,6 +337,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/tests/PhoneBookTest.java</url>
           <line>101</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/AddPage.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
