@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 19">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DataPickerTest.java" afterDir="false" />
+    <list default="true" id="7a72688d-0ac4-4ae0-8c3e-8b0c259a8270" name="Changes" comment="Lesson 20 - Datapicker">
+      <change afterPath="$PROJECT_DIR$/src/test/java/exp/AttachmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +50,8 @@
     "TestNG.AssertionTest.failTest.executor": "Run",
     "TestNG.AssertionTest.testCalc.executor": "Run",
     "TestNG.AssertionTest.testDevideByZero.executor": "Run",
+    "TestNG.AttachmentTest.attachmentTest.executor": "Run",
+    "TestNG.AttachmentTest.executor": "Run",
     "TestNG.DataPickerTest.datapickerTest.executor": "Run",
     "TestNG.PhoneBookGroupTest.registrationWithoutPassword.executor": "Run",
     "TestNG.PhoneBookTest.deleteContact.executor": "Run",
@@ -79,7 +81,42 @@
       <recent name="$PROJECT_DIR$/src/file" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DataPickerTest.datapickerTest">
+  <component name="RunManager" selected="TestNG.AttachmentTest.attachmentTest">
+    <configuration name="AttachmentTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mynewprojectqa41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exp" />
+      <option name="MAIN_CLASS_NAME" value="exp.AttachmentTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttachmentTest.attachmentTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mynewprojectqa41" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="exp" />
+      <option name="MAIN_CLASS_NAME" value="exp.AttachmentTest" />
+      <option name="METHOD_NAME" value="attachmentTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataPickerTest.datapickerTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mynewprojectqa41" />
       <extension name="coverage">
@@ -134,58 +171,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneBookTest.registrationWithoutPassword" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mynewprojectqa41" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
-      <option name="METHOD_NAME" value="registrationWithoutPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PhoneBookTest.successfulRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mynewprojectqa41" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PhoneBookTest" />
-      <option name="METHOD_NAME" value="successfulRegistration" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DataPickerTest.datapickerTest" />
+        <item itemvalue="TestNG.AttachmentTest.attachmentTest" />
+        <item itemvalue="TestNG.AttachmentTest" />
         <item itemvalue="TestNG.PhoneBookGroupTest.registrationWithoutPassword" />
+        <item itemvalue="TestNG.DataPickerTest.datapickerTest" />
         <item itemvalue="TestNG.PhoneBookTest.loginOfAnExistingUserAddContact" />
-        <item itemvalue="TestNG.PhoneBookTest.successfulRegistration" />
-        <item itemvalue="TestNG.PhoneBookTest.registrationWithoutPassword" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -260,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713558516678</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Lesson 20 - Datapicker">
+      <option name="closed" value="true" />
+      <created>1714759122247</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714759122247</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +285,8 @@
     <MESSAGE value="02/04/24 Lesson 14" />
     <MESSAGE value="Lesson 14 - group1" />
     <MESSAGE value="Lesson 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 19" />
+    <MESSAGE value="Lesson 20 - Datapicker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 20 - Datapicker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -342,6 +345,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/pages/AddPage.java</url>
           <line>34</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/PhoneBookGroupTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/tests/WindowAndTabTests.java</url>
